@@ -1,3 +1,7 @@
+.dark-theme .message {
+  background-color: #212529;
+}
+
 .message {
   position: fixed;
   top: 3em;

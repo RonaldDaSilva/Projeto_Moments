@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { MessagesService } from 'src/app/services/messages.service';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-messages',
@@ -12,5 +13,12 @@ import { MessagesService } from 'src/app/services/messages.service';
 export class MessagesComponent {
   faTimes = faTimes;
 
-  constructor(public messageService: MessagesService) {}
+  constructor(
+    public messageService: MessagesService,
+    public themeService: ThemeService
+  ) {}
+
+  themeSwitcher() {
+    this.themeService.themeSwitcher();
+  }
 }

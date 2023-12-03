@@ -17,6 +17,11 @@ img {
   margin-bottom: 0 auto 1em;
 }
 
+.dark-theme .about-moment,
+.actions {
+  border-bottom: 1px solid #000;
+}
+
 .about-moment,
 .actions {
   border-bottom: 1px solid #ccc;
@@ -26,6 +31,15 @@ img {
 
 .actions {
   background-color: #eee;
+}
+
+.dark-theme .actions {
+  background-color: #212529;
+  border-bottom: 1px solid #000;
+}
+
+.dark-theme .actions h3 {
+  background-color: #212529;
 }
 
 .comments {

@@ -12,6 +12,7 @@ import { faTimes, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { MomentService } from 'src/app/services/moment.service';
 import { MessagesService } from 'src/app/services/messages.service';
 import { CommentService } from 'src/app/services/comment.service';
+import { ThemeService } from 'src/app/services/theme.service';
 
 import { Moment } from 'src/app/Moments';
 import { Comment } from 'src/app/Comment';
@@ -37,7 +38,8 @@ export class MomentComponent implements OnInit {
     private route: ActivatedRoute,
     private messagesService: MessagesService,
     private router: Router,
-    private commentService: CommentService
+    private commentService: CommentService,
+    public themeService: ThemeService
   ) {}
 
   ngOnInit(): void {
@@ -88,5 +90,9 @@ export class MomentComponent implements OnInit {
     this.commentForm.reset();
 
     formDirective.resetForm();
+  }
+
+  themeSwitcher() {
+    this.themeService.themeSwitcher();
   }
 }

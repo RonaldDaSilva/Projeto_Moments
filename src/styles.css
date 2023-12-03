@@ -1,14 +1,31 @@
+:root {
+  --bg-color: #fff;
+  --border-color: #efefef;
+  --font-color: #444;
+  --primary-color: #777;
+}
+
+.dark-theme * {
+  background: #212529;
+  border-color: var(--border-color);
+  color: #f1f5f9;
+}
+
+.dark-theme input[type="submit"] {
+  background-color: var(--primary-color);
+}
+
 * {
   padding: 0;
   margin: 0;
   font-family: Cambria;
   box-sizing: border-box;
-  color: #444;
+  color: var(--font-color);
 }
 
 a {
   text-decoration: none;
-  color: #444;
+  color: var(--font-color);
   transition: 0.4s;
 }
 
@@ -38,12 +55,12 @@ form {
 .form-group input,
 .form-group textarea {
   padding: 0.6em;
-  color: #777;
+  color: var(--primary-color);
   font-size: 0.8em;
 }
 
 input[type="submit"] {
-  background-color: #efefef;
+  background-color: #eee;
   border: 2px solid transparent;
   padding: 0.6em 1em;
   font-weight: bold;
@@ -68,12 +85,12 @@ input[type="submit"]:hover {
 /* Buttons */
 .edit-btn,
 .remove-btn {
-  border: 1px solid #efefef;
+  border: 1px solid;
   padding: 0.4em 1em;
   font-size: 1em;
   margin: 0 0.5em;
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--bg-color);
   transition: 0.4s;
 }
 
@@ -88,9 +105,15 @@ a fa-icon {
   color: #007bff;
 }
 
+.dark-theme .edit-btn,
+.edit-btn path {
+  background-color: #212529;
+  color: #007bff;
+}
+
 .edit-btn:hover,
 .edit-btn:hover path {
-  color: #fff;
+  color: var(--bg-color);
   background-color: #007bff;
 }
 
@@ -100,8 +123,15 @@ a fa-icon {
   color: #dc3545;
 }
 
+.dark-theme .remove-btn,
+.remove-btn path {
+  border-color: #dc3545;
+  background-color: #212529;
+  color: #dc3545;
+}
+
 .remove-btn:hover,
 .remove-btn:hover path {
-  color: #fff;
+  color: var(--bg-color);
   background-color: #dc3545;
 }
